@@ -15,6 +15,7 @@ namespace Dogana
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
 
         }
 
@@ -40,6 +41,7 @@ namespace Dogana
             double vlera_akcizes = 0;
             double vlera_tvsh = 0;
             string euro = "€";
+
             #region Kubik 0-2000
             try
             {
@@ -55,8 +57,8 @@ namespace Dogana
                     if (Viti_val == 2017 && dymi.Checked)
                     {
                         akciza1.Text = vlera_akcizes.ToString() + euro;
-                        tatimi1.Text = tatimi_vleres.ToString() + euro;
-                        tvsh1.Text = max_tvsh.ToString();
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = max_tvsh.ToString() + euro;
 
 
                         total1.Text = Convert.ToString(tatimi_vleres + max_tvsh + euro);
@@ -67,11 +69,12 @@ namespace Dogana
                         vlera_akcizes = 400;
                         vlera_tvsh = 72;
                         akciza1.Text = vlera_akcizes.ToString() + euro;
-                        tatimi1.Text = tatimi_vleres.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
                         tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
 
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
                         total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+
 
                     }
                     else if (Viti_val == 2008 && dymi.Checked)
@@ -79,7 +82,7 @@ namespace Dogana
                         vlera_akcizes = 600;
                         vlera_tvsh = 108;
                         akciza1.Text = vlera_akcizes.ToString() + euro;
-                        tatimi1.Text = tatimi_vleres.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
                         tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
 
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
@@ -91,7 +94,7 @@ namespace Dogana
                         vlera_akcizes = 700;
                         vlera_tvsh = 126;
                         akciza1.Text = vlera_akcizes.ToString() + euro;
-                        tatimi1.Text = tatimi_vleres.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
                         tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
 
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
@@ -103,7 +106,7 @@ namespace Dogana
                         vlera_akcizes = 800;
                         vlera_tvsh = 144;
                         akciza1.Text = vlera_akcizes.ToString() + euro;
-                        tatimi1.Text = tatimi_vleres.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
                         tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
 
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
@@ -115,7 +118,7 @@ namespace Dogana
                         vlera_akcizes = 900;
                         vlera_tvsh = 162;
                         akciza1.Text = vlera_akcizes.ToString() + euro;
-                        tatimi1.Text = tatimi_vleres.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
                         tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
 
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
@@ -127,7 +130,7 @@ namespace Dogana
                         vlera_akcizes = 1000;
                         vlera_tvsh = 180;
                         akciza1.Text = vlera_akcizes.ToString() + euro;
-                        tatimi1.Text = tatimi_vleres.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
                         tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
 
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
@@ -139,7 +142,7 @@ namespace Dogana
                         vlera_akcizes = 1100;
                         vlera_tvsh = 198;
                         akciza1.Text = vlera_akcizes.ToString() + euro;
-                        tatimi1.Text = tatimi_vleres.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
                         tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
 
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
@@ -151,7 +154,7 @@ namespace Dogana
                         vlera_akcizes = 1200;
                         vlera_tvsh = 216;
                         akciza1.Text = vlera_akcizes.ToString() + euro;
-                        tatimi1.Text = tatimi_vleres.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
                         tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
 
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
@@ -163,7 +166,7 @@ namespace Dogana
                         vlera_akcizes = 1300;
                         vlera_tvsh = 234;
                         akciza1.Text = vlera_akcizes.ToString() + euro;
-                        tatimi1.Text = tatimi_vleres.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
                         tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
 
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
@@ -175,7 +178,7 @@ namespace Dogana
                         vlera_akcizes = 1500;
                         vlera_tvsh = 270;
                         akciza1.Text = vlera_akcizes.ToString() + euro;
-                        tatimi1.Text = tatimi_vleres.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
                         tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
 
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);

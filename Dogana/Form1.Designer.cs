@@ -519,7 +519,7 @@
             this.total1.Depth = 0;
             this.total1.Font = new System.Drawing.Font("Roboto", 11F);
             this.total1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.total1.Location = new System.Drawing.Point(45, 400);
+            this.total1.Location = new System.Drawing.Point(25, 400);
             this.total1.MouseState = MaterialSkin.MouseState.HOVER;
             this.total1.Name = "total1";
             this.total1.Size = new System.Drawing.Size(0, 19);
@@ -532,7 +532,7 @@
             this.total2.Depth = 0;
             this.total2.Font = new System.Drawing.Font("Roboto", 11F);
             this.total2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.total2.Location = new System.Drawing.Point(357, 400);
+            this.total2.Location = new System.Drawing.Point(326, 400);
             this.total2.MouseState = MaterialSkin.MouseState.HOVER;
             this.total2.Name = "total2";
             this.total2.Size = new System.Drawing.Size(0, 19);
