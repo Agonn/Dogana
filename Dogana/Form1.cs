@@ -3,6 +3,7 @@ using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Drawing;
 
 namespace Dogana
 {
@@ -41,7 +42,8 @@ namespace Dogana
             double vlera_akcizes = 0;
             double vlera_tvsh = 0;
             string euro = "€";
-
+            total1.Font = new Font(tvsh1.Font.FontFamily, 20);
+            total2.Font = new Font(tvsh1.Font.FontFamily, 20);
             #region Kubik 0-2000
             try
             {
