@@ -300,6 +300,22 @@ namespace Dogana
             total1.Text = "";
             total2.Text = "";
         }
+
+        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Viti_prodhimit.Text = "";
+            vlera.Text = "";
+            akciza1.Text = "";
+            tatimi1.Text = "";
+            tvsh1.Text = "";
+            total1.Text = "";
+            total2.Text = "";
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 #endregion
 }

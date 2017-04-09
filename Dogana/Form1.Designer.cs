@@ -72,6 +72,7 @@
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.total1 = new MaterialSkin.Controls.MaterialLabel();
             this.total2 = new MaterialSkin.Controls.MaterialLabel();
+            this.ToolTip_1 = new MetroFramework.Components.MetroToolTip();
             this.Main_context.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,6 +164,7 @@
             this.CheckTopMost.TabIndex = 5;
             this.CheckTopMost.TabStop = false;
             this.CheckTopMost.Text = "Off";
+            this.ToolTip_1.SetToolTip(this.CheckTopMost, "Çdoherë ne fokus");
             this.CheckTopMost.UseVisualStyleBackColor = false;
             this.CheckTopMost.CheckedChanged += new System.EventHandler(this.CheckTopMost_CheckedChanged);
             // 
@@ -342,6 +344,7 @@
             this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
             this.resetToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.resetToolStripMenuItem.Text = "Reset";
+            this.resetToolStripMenuItem.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -353,6 +356,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // kubik
             // 
@@ -621,6 +625,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem17;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem18;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
+        private MetroFramework.Components.MetroToolTip ToolTip_1;
     }
 }
 
