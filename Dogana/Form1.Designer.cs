@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.kalkulo = new MaterialSkin.Controls.MaterialFlatButton();
             this.Viti_prodhimit = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.vlera = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -566,6 +567,7 @@
             this.Controls.Add(this.vlera);
             this.Controls.Add(this.Viti_prodhimit);
             this.Controls.Add(this.kalkulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Sizable = false;
