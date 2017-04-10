@@ -381,6 +381,7 @@
             this.dymi.Name = "dymi";
             this.dymi.Size = new System.Drawing.Size(58, 15);
             this.dymi.TabIndex = 3;
+            this.dymi.TabStop = true;
             this.dymi.Text = "0-2000";
             this.dymi.UseVisualStyleBackColor = true;
             // 
