@@ -39,6 +39,8 @@ namespace Dogana
             total2.Font = new Font(tvsh1.Font.FontFamily, 20);
 #endregion
     
+
+ 
         try
             {
 
@@ -47,11 +49,13 @@ namespace Dogana
 
 
                     double Viti_val = double.Parse(Viti_prodhimit.Text);
-                    double Vlera_val = double.Parse(vlera.Text); //Fix this
+                    double Vlera_val = double.Parse(vlera.Text); 
                     double tatimi_vleres = Vlera_val * 0.10;
                     double max_tvsh = (Vlera_val + tatimi_vleres) * 0.18;
-                    #region Kubik 2001-3000
 
+                    #region Kubik conditions
+
+                    //MbiTremi
                     if (Viti_val >= 2017 && Viti_val <= 2009 && tremi.Checked)
                     {
                         vlera_akcizes = 1000;
@@ -162,8 +166,9 @@ namespace Dogana
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
                         total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
                     }
+                    // End mbiTremi
 
-
+                    //mbiDymi
 
                     if (Viti_val == 2017 && mbidymi.Checked)
                     {
@@ -274,8 +279,9 @@ namespace Dogana
                         total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
                         total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
                     }
+                    //End - MbiDymi
 
-
+                    //Dymi
                     if (Viti_val == 2017 && dymi.Checked)
                     {
                         akciza1.Text = vlera_akcizes.ToString() + euro;
@@ -413,7 +419,7 @@ namespace Dogana
                     MessageBox.Show("Vetem numra");
 
                 }
-
+                //End - Dymi
             }
 
             catch (Exception)
@@ -548,6 +554,11 @@ namespace Dogana
         private void ToolTip_1_Popup(object sender, PopupEventArgs e)
         {
 
+        }
+
+        private void mbidymi_CheckedChanged(object sender, EventArgs e)
+        {
+            
         }
     }
     #endregion

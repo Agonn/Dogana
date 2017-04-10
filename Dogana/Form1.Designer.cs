@@ -393,6 +393,7 @@
             this.mbidymi.TabIndex = 4;
             this.mbidymi.Text = "2001-3000";
             this.mbidymi.UseVisualStyleBackColor = true;
+            this.mbidymi.CheckedChanged += new System.EventHandler(this.mbidymi_CheckedChanged);
             // 
             // tremi
             // 
