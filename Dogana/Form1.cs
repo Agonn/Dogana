@@ -14,12 +14,7 @@ namespace Dogana
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
+        #region topMostButton
         private void CheckTopMost_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckTopMost.Checked)
@@ -31,12 +26,10 @@ namespace Dogana
                 TopMost = false;
             }
         }
+#endregion
 
-        private void lOlToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
-
+        #region Entries
         private void kalkulo_Click(object sender, EventArgs e)
         {
             double vlera_akcizes = 0;
@@ -44,16 +37,26 @@ namespace Dogana
             string euro = "€";
             total1.Font = new Font(tvsh1.Font.FontFamily, 20);
             total2.Font = new Font(tvsh1.Font.FontFamily, 20);
-            #region Kubik 0-2000
+#endregion
+        #region Kubik 0-2000
+
+
             try
             {
 
                 if (Regex.IsMatch(Viti_prodhimit.Text, "[ ^ 0-9]") && Regex.IsMatch(vlera.Text, "[ ^ 0-9]"))
                 {
+
+
                     double Viti_val = double.Parse(Viti_prodhimit.Text);
                     double Vlera_val = double.Parse(vlera.Text); //Fix this
                     double tatimi_vleres = Vlera_val * 0.10;
                     double max_tvsh = (Vlera_val + tatimi_vleres) * 0.18;
+                    #region Kubik 2001-3000
+
+                    
+
+                    #endregion
 
 
                     if (Viti_val == 2017 && dymi.Checked)
@@ -195,14 +198,17 @@ namespace Dogana
                 }
 
             }
+
             catch (Exception)
             {
 
                 MessageBox.Show("Vetem numra");
             }
+
+
         }
         #endregion
-
+ 
 
         #region Main_context_menu
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -320,6 +326,11 @@ namespace Dogana
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ToolTip_1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
     #endregion

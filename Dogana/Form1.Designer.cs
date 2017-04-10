@@ -73,7 +73,7 @@
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.total1 = new MaterialSkin.Controls.MaterialLabel();
             this.total2 = new MaterialSkin.Controls.MaterialLabel();
-            this.ToolTip_1 = new MetroFramework.Components.MetroToolTip();
+            this.onTopTooltip = new MetroFramework.Components.MetroToolTip();
             this.Main_context.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,7 +165,7 @@
             this.CheckTopMost.TabIndex = 5;
             this.CheckTopMost.TabStop = false;
             this.CheckTopMost.Text = "Off";
-            this.ToolTip_1.SetToolTip(this.CheckTopMost, "Çdoherë ne fokus");
+            this.onTopTooltip.SetToolTip(this.CheckTopMost, "Çdoherë ne fokus");
             this.CheckTopMost.UseVisualStyleBackColor = false;
             this.CheckTopMost.CheckedChanged += new System.EventHandler(this.CheckTopMost_CheckedChanged);
             // 
@@ -207,7 +207,6 @@
             this.lOlToolStripMenuItem.Name = "lOlToolStripMenuItem";
             this.lOlToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.lOlToolStripMenuItem.Text = "Viti";
-            this.lOlToolStripMenuItem.Click += new System.EventHandler(this.lOlToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -540,6 +539,10 @@
             this.total2.Size = new System.Drawing.Size(0, 19);
             this.total2.TabIndex = 21;
             // 
+            // onTopTooltip
+            // 
+            this.onTopTooltip.Popup += new System.Windows.Forms.PopupEventHandler(this.ToolTip_1_Popup);
+            // 
             // Form1
             // 
             this.AcceptButton = this.kalkulo;
@@ -574,7 +577,6 @@
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dogana";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);
             this.Main_context.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -628,7 +630,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem17;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem18;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
-        private MetroFramework.Components.MetroToolTip ToolTip_1;
+        private MetroFramework.Components.MetroToolTip onTopTooltip;
     }
 }
 
