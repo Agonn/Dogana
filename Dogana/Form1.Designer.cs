@@ -75,8 +75,8 @@
             this.total2 = new MaterialSkin.Controls.MaterialLabel();
             this.onTopTooltip = new MetroFramework.Components.MetroToolTip();
             this.PrintForm = new MetroFramework.Controls.MetroButton();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument = new System.Drawing.Printing.PrintDocument();
+            this.rawPrintPreview = new System.Windows.Forms.PrintPreviewDialog();
             this.Main_context.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -556,21 +556,21 @@
             this.PrintForm.Text = "Print";
             this.PrintForm.Click += new System.EventHandler(this.PrintForm_Click);
             // 
-            // printDocument1
+            // printDocument
             // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // printPreviewDialog1
+            // rawPrintPreview
             // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Document = this.printDocument1;
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.ShowIcon = false;
-            this.printPreviewDialog1.Visible = false;
+            this.rawPrintPreview.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.rawPrintPreview.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.rawPrintPreview.ClientSize = new System.Drawing.Size(400, 300);
+            this.rawPrintPreview.Document = this.printDocument;
+            this.rawPrintPreview.Enabled = true;
+            this.rawPrintPreview.Icon = ((System.Drawing.Icon)(resources.GetObject("rawPrintPreview.Icon")));
+            this.rawPrintPreview.Name = "printPreviewDialog1";
+            this.rawPrintPreview.ShowIcon = false;
+            this.rawPrintPreview.Visible = false;
             // 
             // Form1
             // 
@@ -662,8 +662,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
         private MetroFramework.Components.MetroToolTip onTopTooltip;
         private MetroFramework.Controls.MetroButton PrintForm;
-        private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument;
+        private System.Windows.Forms.PrintPreviewDialog rawPrintPreview;
     }
 }
 

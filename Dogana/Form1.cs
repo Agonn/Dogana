@@ -581,12 +581,12 @@ namespace Dogana
             bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
             Graphics mg = Graphics.FromImage(bmp);
             mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
-            printPreviewDialog1.Size = new System.Drawing.Size(500, 560);
+            rawPrintPreview.Size = new System.Drawing.Size(500, 560);
 
 
 
 
-            printPreviewDialog1.ShowDialog();
+            rawPrintPreview.ShowDialog();
         }
 
      
