@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Drawing;
+using System.Drawing.Printing;
+
 
 namespace Dogana
 {
@@ -12,6 +14,7 @@ namespace Dogana
         public Form1()
         {
             InitializeComponent();
+
         }
 
         #region topMostButton
@@ -26,7 +29,7 @@ namespace Dogana
                 TopMost = false;
             }
         }
-#endregion
+        #endregion
 
 
         #region Entries
@@ -37,11 +40,11 @@ namespace Dogana
             string euro = "€";
             total1.Font = new Font(tvsh1.Font.FontFamily, 20);
             total2.Font = new Font(tvsh1.Font.FontFamily, 20);
-#endregion
-    
+            #endregion
 
- 
-        try
+
+
+            try
             {
 
                 if (Regex.IsMatch(Viti_prodhimit.Text, "[ ^ 0-9]") && Regex.IsMatch(vlera.Text, "[ ^ 0-9]"))
@@ -49,7 +52,7 @@ namespace Dogana
 
 
                     double Viti_val = double.Parse(Viti_prodhimit.Text);
-                    double Vlera_val = double.Parse(vlera.Text); 
+                    double Vlera_val = double.Parse(vlera.Text);
                     double tatimi_vleres = Vlera_val * 0.10;
                     double max_tvsh = (Vlera_val + tatimi_vleres) * 0.18;
 
@@ -431,7 +434,7 @@ namespace Dogana
 
         }
         #endregion
- 
+
 
         #region Main_context_menu
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -558,8 +561,34 @@ namespace Dogana
 
         private void mbidymi_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
+
+
+        #endregion
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp, 0, 0);
+        }
+
+        Bitmap bmp;
+
+        private void PrintForm_Click(object sender, EventArgs e)
+        {
+
+            Graphics g = this.CreateGraphics();
+            bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
+            Graphics mg = Graphics.FromImage(bmp);
+            mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+            printPreviewDialog1.Size = new System.Drawing.Size(500, 560);
+
+
+
+
+            printPreviewDialog1.ShowDialog();
+        }
+
+     
     }
-    #endregion
 }
