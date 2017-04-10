@@ -38,10 +38,8 @@ namespace Dogana
             total1.Font = new Font(tvsh1.Font.FontFamily, 20);
             total2.Font = new Font(tvsh1.Font.FontFamily, 20);
 #endregion
-        #region Kubik 0-2000
-
-
-            try
+    
+        try
             {
 
                 if (Regex.IsMatch(Viti_prodhimit.Text, "[ ^ 0-9]") && Regex.IsMatch(vlera.Text, "[ ^ 0-9]"))
@@ -54,9 +52,228 @@ namespace Dogana
                     double max_tvsh = (Vlera_val + tatimi_vleres) * 0.18;
                     #region Kubik 2001-3000
 
-                    
+                    if (Viti_val >= 2017 && Viti_val <= 2009 && tremi.Checked)
+                    {
+                        vlera_akcizes = 1000;
+                        vlera_tvsh = 180;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
 
-                    #endregion
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2008 && tremi.Checked)
+                    {
+                        vlera_akcizes = 1500;
+                        vlera_tvsh = 270;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2007 && tremi.Checked)
+                    {
+                        vlera_akcizes = 1800;
+                        vlera_tvsh = 324;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2006 && tremi.Checked)
+                    {
+                        vlera_akcizes = 2100;
+                        vlera_tvsh = 378;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2005 && tremi.Checked)
+                    {
+                        vlera_akcizes = 2400;
+                        vlera_tvsh = 432;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2004 && tremi.Checked)
+                    {
+                        vlera_akcizes = 2700;
+                        vlera_tvsh = 486;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2003 && tremi.Checked)
+                    {
+                        vlera_akcizes = 3000;
+                        vlera_tvsh = 540;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2002 && tremi.Checked)
+                    {
+                        vlera_akcizes = 3300;
+                        vlera_tvsh = 594;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2001 && tremi.Checked)
+                    {
+                        vlera_akcizes = 3600;
+                        vlera_tvsh = 648;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val >= 2000 && tremi.Checked)
+                    {
+                        vlera_akcizes = 3900;
+                        vlera_tvsh = 702;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+
+
+
+                    if (Viti_val == 2017 && mbidymi.Checked)
+                    {
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = max_tvsh.ToString() + euro;
+
+
+                        total1.Text = Convert.ToString(tatimi_vleres + max_tvsh + euro);
+                        total2.Text = Convert.ToString(tatimi_vleres + max_tvsh + Vlera_val + euro);
+                    }
+                    else if (Viti_val <= 2016 && Viti_val >= 2009 && mbidymi.Checked)
+                    {
+                        vlera_akcizes = 400;
+                        vlera_tvsh = 72;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2007 && mbidymi.Checked)
+                    {
+                        vlera_akcizes = 800;
+                        vlera_tvsh = 144;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2006 && mbidymi.Checked)
+                    {
+                        vlera_akcizes = 1000;
+                        vlera_tvsh = 180;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2005 && mbidymi.Checked)
+                    {
+                        vlera_akcizes = 1200;
+                        vlera_tvsh = 216;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2004 && mbidymi.Checked)
+                    {
+                        vlera_akcizes = 1400;
+                        vlera_tvsh = 252;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2003 && mbidymi.Checked)
+                    {
+                        vlera_akcizes = 1600;
+                        vlera_tvsh = 288;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2002 && mbidymi.Checked)
+                    {
+                        vlera_akcizes = 1800;
+                        vlera_tvsh = 324;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val == 2001 && mbidymi.Checked)
+                    {
+                        vlera_akcizes = 2000;
+                        vlera_tvsh = 360;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
+                    else if (Viti_val >= 2000 && mbidymi.Checked)
+                    {
+                        vlera_akcizes = 2200;
+                        vlera_tvsh = 396;
+                        akciza1.Text = vlera_akcizes.ToString() + euro;
+                        tatimi1.Text = tatimi_vleres.ToString("N0") + euro;
+                        tvsh1.Text = Convert.ToString(max_tvsh + vlera_tvsh) + euro;
+
+                        total1.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + vlera_tvsh + euro);
+                        total2.Text = Convert.ToString(vlera_akcizes + tatimi_vleres + max_tvsh + Vlera_val + vlera_tvsh + euro);
+                    }
 
 
                     if (Viti_val == 2017 && dymi.Checked)
