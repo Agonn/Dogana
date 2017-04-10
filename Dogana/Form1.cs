@@ -59,7 +59,7 @@ namespace Dogana
                     #region Kubik conditions
 
                     //MbiTremi
-                    if (Viti_val >= 2017 && Viti_val <= 2009 && tremi.Checked)
+                    if (Viti_val <= 2017 && Viti_val >= 2009 && tremi.Checked)
                     {
                         vlera_akcizes = 1000;
                         vlera_tvsh = 180;
