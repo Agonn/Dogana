@@ -74,6 +74,9 @@
             this.total1 = new MaterialSkin.Controls.MaterialLabel();
             this.total2 = new MaterialSkin.Controls.MaterialLabel();
             this.onTopTooltip = new MetroFramework.Components.MetroToolTip();
+            this.PrintForm = new MetroFramework.Controls.MetroButton();
+            this.printDocument = new System.Drawing.Printing.PrintDocument();
+            this.rawPrintPreview = new System.Windows.Forms.PrintPreviewDialog();
             this.Main_context.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,7 +162,7 @@
             this.CheckTopMost.AutoSize = true;
             this.CheckTopMost.BackColor = System.Drawing.Color.White;
             this.CheckTopMost.CustomBackground = true;
-            this.CheckTopMost.Location = new System.Drawing.Point(352, 34);
+            this.CheckTopMost.Location = new System.Drawing.Point(390, 40);
             this.CheckTopMost.Name = "CheckTopMost";
             this.CheckTopMost.Size = new System.Drawing.Size(80, 17);
             this.CheckTopMost.TabIndex = 5;
@@ -544,6 +547,31 @@
             // 
             this.onTopTooltip.Popup += new System.Windows.Forms.PopupEventHandler(this.ToolTip_1_Popup);
             // 
+            // PrintForm
+            // 
+            this.PrintForm.Location = new System.Drawing.Point(326, 34);
+            this.PrintForm.Name = "PrintForm";
+            this.PrintForm.Size = new System.Drawing.Size(58, 23);
+            this.PrintForm.TabIndex = 22;
+            this.PrintForm.Text = "Print";
+            this.PrintForm.Click += new System.EventHandler(this.PrintForm_Click);
+            // 
+            // printDocument
+            // 
+            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // rawPrintPreview
+            // 
+            this.rawPrintPreview.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.rawPrintPreview.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.rawPrintPreview.ClientSize = new System.Drawing.Size(400, 300);
+            this.rawPrintPreview.Document = this.printDocument;
+            this.rawPrintPreview.Enabled = true;
+            this.rawPrintPreview.Icon = ((System.Drawing.Icon)(resources.GetObject("rawPrintPreview.Icon")));
+            this.rawPrintPreview.Name = "printPreviewDialog1";
+            this.rawPrintPreview.ShowIcon = false;
+            this.rawPrintPreview.Visible = false;
+            // 
             // Form1
             // 
             this.AcceptButton = this.kalkulo;
@@ -552,6 +580,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(470, 483);
             this.ContextMenuStrip = this.Main_context;
+            this.Controls.Add(this.PrintForm);
             this.Controls.Add(this.total2);
             this.Controls.Add(this.total1);
             this.Controls.Add(this.materialLabel4);
@@ -632,6 +661,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem18;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
         private MetroFramework.Components.MetroToolTip onTopTooltip;
+        private MetroFramework.Controls.MetroButton PrintForm;
+        private System.Drawing.Printing.PrintDocument printDocument;
+        private System.Windows.Forms.PrintPreviewDialog rawPrintPreview;
     }
 }
 
