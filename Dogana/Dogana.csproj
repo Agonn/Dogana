@@ -25,7 +25,7 @@
     <ProductName>Dogana</ProductName>
     <PublisherName>Agoni</PublisherName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -139,7 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Martz90-Hex-Car.ico" />
-    <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

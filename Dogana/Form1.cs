@@ -38,20 +38,16 @@ namespace Dogana
             total2.Font = new Font(tvsh1.Font.FontFamily, 20);
 #endregion
     
-
- 
-        try
-            {
+           try
+                {
 
                 if (Regex.IsMatch(Viti_prodhimit.Text, "[ ^ 0-9]") && Regex.IsMatch(vlera.Text, "[ ^ 0-9]"))
                 {
-
-
                     double Viti_val = double.Parse(Viti_prodhimit.Text);
                     double Vlera_val = double.Parse(vlera.Text); 
                     double tatimi_vleres = Vlera_val * 0.10;
                     double max_tvsh = (Vlera_val + tatimi_vleres) * 0.18;
-
+            
                     #region Kubik conditions
 
                     //MbiTremi
