@@ -1,6 +1,5 @@
 ﻿using MaterialSkin.Controls;
 using System;
-using System.ComponentModel;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Drawing;
@@ -559,6 +558,11 @@ namespace Dogana
         private void mbidymi_CheckedChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
     #endregion

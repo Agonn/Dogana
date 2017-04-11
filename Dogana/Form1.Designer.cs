@@ -578,6 +578,7 @@
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dogana";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);
             this.Main_context.ResumeLayout(false);
             this.ResumeLayout(false);
